@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./index.module.css";
+import DarkModeToggle from "../darkModeToggle";
 
 const links = [
   {
@@ -44,6 +45,7 @@ const Navbar = () => {
       <nav>
         <div>
           <ul className={styles.links}>
+            <DarkModeToggle />
             {links.map((link) => (
               <li key={link.id}>
                 <Link href={link.url} className={styles.link}>
